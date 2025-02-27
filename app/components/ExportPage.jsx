@@ -126,6 +126,13 @@ export default function ExportPage() {
                 }}
               >
                 <div className="p-4 h-full flex flex-col">
+                  {/* Collection name at the top of each card */}
+                  <div className="text-center mb-2">
+                    <h4 className="text-sm font-medium text-gray-500">
+                      {collections.find(c => c.id === selectedCollection)?.name}
+                    </h4>
+                  </div>
+                  
                   {/* Icon area */}
                   <div className="flex justify-center items-center mb-4 h-1/3">
                     {card.iconType === 'text' ? (

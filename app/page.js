@@ -539,6 +539,13 @@ export default function Home() {
                   <div className="border-2 border-gray-300 rounded-lg p-4 w-full max-w-xs mx-auto aspect-[3/4]">
                     {/* Card preview content */}
                     <div className="h-full flex flex-col">
+                      {/* Collection name at the top of each card */}
+                      <div className="text-center mb-2">
+                        <h4 className="text-sm font-medium text-gray-500">
+                          {collections.find(c => c.id === activeCollection)?.name}
+                        </h4>
+                      </div>
+                      
                       {/* Icon area */}
                       <div className="flex justify-center items-center mb-4 h-1/3">
                         {currentCard?.iconType === 'text' ? (
@@ -609,7 +616,14 @@ export default function Home() {
               }}
             >
               {/* Card content for printing */}
-              <div className="h-full flex flex-col">
+              <div className="p-4 h-full flex flex-col">
+                {/* Collection name at the top of each card */}
+                <div className="text-center mb-2">
+                  <h4 className="text-sm font-medium text-gray-500">
+                    {collections.find(c => c.id === activeCollection)?.name}
+                  </h4>
+                </div>
+                
                 {/* Icon area */}
                 <div className="flex justify-center items-center mb-4 h-1/3">
                   {card.iconType === 'text' ? (
